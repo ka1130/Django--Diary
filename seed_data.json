@@ -1,0 +1,658 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "posts", "model": "category" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "posts", "model": "tag" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "posts", "model": "post" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "j07m7t2rm9qw9jni1n872wzbfr7c70vt",
+    "fields": {
+      "session_data": "NjNhNDEzMGQ5YTQ3NDg2OTlhMjAzNWFhNjJkNDA2ODg1NDI5YjkyYTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmNDY5YmZhNmQ2NzY0M2QxZTBiZDdlY2IwZWE0NGQwNjBiYWM4M2VhIn0=",
+      "expire_date": "2019-09-08T20:12:03.225Z"
+    }
+  },
+  { "model": "posts.category", "pk": 1, "fields": { "name": "World" } },
+  { "model": "posts.category", "pk": 2, "fields": { "name": "Business" } },
+  { "model": "posts.category", "pk": 3, "fields": { "name": "U.S." } },
+  { "model": "posts.category", "pk": 4, "fields": { "name": "Opinion" } },
+  { "model": "posts.category", "pk": 5, "fields": { "name": "Politics" } },
+  { "model": "posts.tag", "pk": 1, "fields": { "name": "fitness" } },
+  { "model": "posts.tag", "pk": 2, "fields": { "name": "social-media" } },
+  { "model": "posts.tag", "pk": 3, "fields": { "name": "photography" } },
+  {
+    "model": "posts.tag",
+    "pk": 4,
+    "fields": { "name": "artificial-intelligence" }
+  },
+  { "model": "posts.tag", "pk": 5, "fields": { "name": "trump" } },
+  { "model": "posts.tag", "pk": 6, "fields": { "name": "greenland" } },
+  { "model": "posts.tag", "pk": 7, "fields": { "name": "brexit" } },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add category",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change category",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete category",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view category",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add tag",
+      "content_type": 8,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change tag",
+      "content_type": 8,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete tag",
+      "content_type": 8,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view tag",
+      "content_type": 8,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add post",
+      "content_type": 9,
+      "codename": "add_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change post",
+      "content_type": 9,
+      "codename": "change_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete post",
+      "content_type": 9,
+      "codename": "delete_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view post",
+      "content_type": 9,
+      "codename": "view_post"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$3uPKSuH1dYws$lRkNiwh9MDTN+/e7eXIvHa2OannlAesLaVZujImFRes=",
+      "last_login": "2019-08-25T20:12:03.222Z",
+      "is_superuser": true,
+      "username": "kama",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-08-25T20:11:52.414Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+      "title": "Pakistan\u2019s realities",
+      "content": "Imran Khan, the cricketing superstar-turned-politician, has had a turbulent first year in office.\r\n\r\nIt was a position that some thought he would never achieve: his 2018 election victory came after a two-decade long struggle, large portions of which were spent in the political wilderness.\r\n\r\nAnd yet he persevered, brushing off allegations that the country's powerful military, which has ruled Pakistan on and off since independence, was interfering behind the scenes to the benefit of his PTI party.\r\n\r\nThis perception, and the myriad challenges facing Pakistan, has meant that Mr Khan's first year in power has been anything but smooth sailing. Critics charge that he has presented one face to the world and a very different one within Pakistan.\r\n\r\nBut what has he done?",
+      "created_at": "2019-08-25T20:18:59Z",
+      "author": 1,
+      "category": 1,
+      "tags": [6, 5]
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+      "title": "Halt Brexit",
+      "content": "John McDonnell has privately argued that Labour should campaign to prevent Brexit, opening up a new front in Labour\u2019s civil war on Europe.\r\n\r\nThe shadow chancellor has held private conversations with shadow cabinet colleagues in recent weeks in which he has argued that Labour\u2019s position should be to revoke article 50 and stop Brexit in its tracks.\r\n\r\nMcDonnell has been a vocal advocate of Labour backing a second EU referendum. But his private remarks go much further and will put him on a collision course with Jeremy Corbyn\u2019s team, who are still resisting full-blown support for another referendum.\r\n\r\nInstead, their focus is on forcing a vote of no confidence in Boris Johnson\u2019s government or passing a law that would require him to seek an extension\u2026",
+      "created_at": "2019-08-25T20:20:43Z",
+      "author": 1,
+      "category": 5,
+      "tags": [7]
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2019-08-25T20:13:44.820Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "World",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2019-08-25T20:13:50.912Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Business",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2019-08-25T20:13:59.167Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "U.S.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2019-08-25T20:14:16.180Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "Opinion",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2019-08-25T20:14:42.573Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "fitness",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2019-08-25T20:14:49.151Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "social-media",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2019-08-25T20:15:06.039Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "photography",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2019-08-25T20:15:47.784Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "artificial-intelligence",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2019-08-25T20:19:27.713Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "trump",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2019-08-25T20:19:41.605Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "greenland",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2019-08-25T20:19:48.695Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Greenland thaws into a global hotspot",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2019-08-25T20:20:59.087Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "brexit",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2019-08-25T20:21:15.830Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "Politics",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2019-08-25T20:21:29.343Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "John McDonnell urges Labour Party to halt Brexit",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2019-08-26T20:35:37.940Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "A year facing Pakistan\u2019s harsh realities",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"title\", \"content\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2019-08-26T20:36:03.844Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Pakistan\u2019s realities",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"title\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2019-08-26T20:36:36.057Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Halt Brexit",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"title\"]}}]"
+    }
+  }
+]

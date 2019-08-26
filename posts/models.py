@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
@@ -15,7 +15,7 @@ class Category(models.Model):
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
@@ -25,7 +25,7 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=50)
     content = models.TextField()
     created_at = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
