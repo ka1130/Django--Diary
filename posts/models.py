@@ -25,7 +25,7 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=15)
     content = models.TextField()
     created_at = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -36,8 +36,8 @@ class Post(models.Model):
         return self.title
 
     def summary(self):
-        return self.content[:100]
-        # give me first 100 chars
+        return self.content[:70]
+        # give me first 70 chars
 
     def pub_date_pretty(self):
-        return self.created_at.strftime('%b %e %Y')
+        return self.created_at.strftime('%b %e')
