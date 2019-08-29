@@ -38,7 +38,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
     image = models.ImageField(
-        upload_to='images', default='placeholder.png')
+        upload_to='images', default='static/images/placeholder.png')
 
     def __str__(self):
         return self.title
