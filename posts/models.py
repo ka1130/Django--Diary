@@ -2,6 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+def trim_string(str, limit):
+    result = str[:limit]
+    last_space = result.rfind(' ')
+    return result[:last_space]
+
+
 class Category(models.Model):
     name = models.CharField(max_length=30)
 
@@ -38,8 +44,9 @@ class Post(models.Model):
         return self.title
 
     def summary(self):
-        return self.content[:70]
-        # give me first 70 chars
+        result = self.content[:70]
+        last_space = result.rfind(' ')
+        return result[:last_space] + '...'
 
     def pub_date_pretty(self):
         return self.created_at.strftime('%b %e')
