@@ -1,4 +1,6 @@
+import os
 from django.db import models
+from django.conf import settings
 from django.contrib.auth.models import User
 
 
@@ -38,7 +40,9 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
     image = models.ImageField(
-        upload_to='images', default='static/images/placeholder.png')
+        upload_to='images/',
+        default='images/placeholder.png',
+    )
 
     def __str__(self):
         return self.title

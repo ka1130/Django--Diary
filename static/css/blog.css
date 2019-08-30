@@ -145,3 +145,8 @@ h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/* Custom */
+.card-img-top {
+  object-fit: cover;
+}
