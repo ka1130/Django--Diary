@@ -22,14 +22,23 @@
 <div class="row mt-4 mb-4">
   <div class="col-md-12">
     <form class="form-inline d-flex justify-content-between mb-4">
-      <div>
-        {% if user.is_authenticated %}
-        <button class="btn btn-outline-primary">
-          + Add post
-        </button>
-        {% endif %}
-      </div>
-      <div>
+        <a class="text-muted" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mx-3"
+          >
+            <circle cx="10.5" cy="10.5" r="7.5"></circle>
+            <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
+          </svg>
+        </a>
         <input
           class="form-control mr-sm-2"
           type="search"
@@ -39,7 +48,6 @@
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
           Search
         </button>
-      </div>
     </form>
   </div>
 </div>
@@ -76,9 +84,11 @@
 </div>
 <div class="row mt-4 mb-4">
   <div class="col-md-12">
-    <button class="btn btn-outline-primary">
+    {% if user.is_authenticated %}
+    <a class="btn btn-outline-primary" href="{% url 'post-create' %}">
       + Add post
-    </button>
+    </a>
+    {% endif %}
   </div>
 </div>
 {% endblock content %}

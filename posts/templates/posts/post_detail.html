@@ -1,1 +1,6 @@
-post detail
+{% extends 'base.html' %} {% block content %}
+<h3 class="mt-4">{{ post.title }}</h3>
+<small class="text-muted">{{ post.pub_date_pretty }}</small>
+<p>{{ post.content }}</p>
+<img src="{{ post.image.url }}" />
+{% endblock %}

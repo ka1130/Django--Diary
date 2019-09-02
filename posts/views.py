@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import (
     ListView,
-    DetailView
+    DetailView,
+    CreateView,
 )
 from .models import Post
 
@@ -26,3 +27,8 @@ class PostsListView(ListView):
 class PostDetailView(DetailView):
     model = Post
     template_name = 'posts/post_detail.html'
+
+
+class PostCreateView(CreateView):
+    model = Post
+    # etc. add here
