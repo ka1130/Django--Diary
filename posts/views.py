@@ -4,6 +4,7 @@ from django.views.generic import (
     DetailView,
     CreateView,
 )
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post
 
 
@@ -18,8 +19,11 @@ class PostDetailView(DetailView):
     template_name = 'posts/post_detail.html'
 
 
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content', 'created_at',
               'author', 'category', 'tags', 'image']
-    # etc. add here
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
