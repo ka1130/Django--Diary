@@ -20,5 +20,6 @@ class PostDetailView(DetailView):
 
 class PostCreateView(CreateView):
     model = Post
-    fields = ['title', 'content']
+    fields = ['title', 'content', 'created_at',
+              'author', 'category', 'tags', 'image']
     # etc. add here
