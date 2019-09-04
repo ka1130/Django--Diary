@@ -1,6 +1,15 @@
 {% extends 'base.html' %} {% block content %}
-<h3 class="mt-4">{{ post.title }}</h3>
-<small class="text-muted">{{ post.pub_date_pretty }}</small>
+<p class="text-right mt-4">
+  <small class="text-muted">
+    {{ post.pub_date_pretty }}
+  </small>
+</p>
+<h3 class="text-center">{{ post.title }}</h3>
+<p class="mb-2">
+  <small>
+    by: <strong>{{ post.author }}</strong>
+  </small>
+</p>
 <p>{{ post.content }}</p>
-<img src="{{ post.image.url }}" />
+<img src="{{ post.image.url }}" class="post-image"/>
 {% endblock %}

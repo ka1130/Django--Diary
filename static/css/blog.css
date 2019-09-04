@@ -147,6 +147,10 @@ h6 {
 }
 
 /* Custom */
+.post-image {
+  max-width: 100%;
+}
+
 .card-img-top {
   object-fit: cover;
 }
