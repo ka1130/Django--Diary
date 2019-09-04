@@ -50,7 +50,7 @@ class Post(models.Model):
         return self.title
 
     def summary(self):
-        result = self.content[:70]
+        result = self.content[:80]
         last_space = result.rfind(' ')
         return result[:last_space] + '...'
 

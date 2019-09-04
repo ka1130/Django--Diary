@@ -5,7 +5,20 @@ from django.views.generic import (
     CreateView,
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django import forms
+
 from .models import Post
+
+
+class PostForm(forms.ModelForm):
+    # Usually you would put the custom form class in a forms.py file as well.
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'created_at',
+                  'category', 'tags', 'image']
+        widgets = {
+            'created_at': forms.DateInput(attrs={'type': 'date'}),
+        }
 
 
 class PostsListView(ListView):
@@ -20,10 +33,11 @@ class PostDetailView(DetailView):
 
 
 class PostCreateView(LoginRequiredMixin, CreateView):
+    form_class = PostForm
     model = Post
-    fields = ['title', 'content', 'created_at',
-              'author', 'category', 'tags', 'image']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    # def get_form():
