@@ -12,9 +12,12 @@
 </p>
 <p>{{ post.content }}</p>
 <img src="{{ post.image.url }}" class="post-image"/>
-<div>
-  <a href="{% url 'post-update' post.id %}" class="btn btn-primary mt-4 mb-4">
-    Edit this post
+<div class="mt-4 mb-4">
+  <a href="{% url 'post-update' post.id %}" class="btn btn-primary mr-4">
+    Edit
   </a>
+  <a href="{% url 'post-delete' post.id %}" class="btn btn-danger">
+    Delete
+  </a>  
 </div>
 {% endblock %}
