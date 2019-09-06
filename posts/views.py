@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import (
     ListView,
     DetailView,
@@ -8,13 +8,21 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 from django import forms
 
 from .models import Post
 
 
 def register(request):
-    form = UserCreationForm()
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}!')
+            return redirect('posts-list')
+    else:
+        form = UserCreationForm()
     return render(request, 'users/register.html', {'form': form})
 
 
