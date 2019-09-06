@@ -7,9 +7,15 @@ from django.views.generic import (
     DeleteView,
 )
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.forms import UserCreationForm
 from django import forms
 
 from .models import Post
+
+
+def register(request):
+    form = UserCreationForm()
+    return render(request, 'users/register.html', {'form': form})
 
 
 class PostForm(forms.ModelForm):
