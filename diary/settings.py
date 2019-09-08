@@ -128,6 +128,5 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-# MEDIA_URL = '/'
 
-print('MEDIA_ROOT: ', MEDIA_ROOT)
+LOGIN_REDIRECT_URL = 'posts-list'
