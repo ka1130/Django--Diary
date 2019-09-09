@@ -8,6 +8,7 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django import forms
 
 from .models import Post
@@ -28,6 +29,7 @@ def register(request):
     return render(request, 'users/register.html', {'form': form})
 
 
+@login_required
 def profile(request):
     return render(request, 'users/profile.html')
 
