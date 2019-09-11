@@ -1,2 +1,3 @@
-# Django--Diary
-A simple blog app built to learn Django framework
+# Django_Magazine
+
+A simple magazine app built to learn Django framework
