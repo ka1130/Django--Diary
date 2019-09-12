@@ -12,7 +12,11 @@ a.text-dark:hover {
   color: #1d2124 !important;
 }
 
+.media {
+  margin-top: 20px;
+}
+
 .rounded-circle.account-img {
-  width: 60px;
-  margin: 20px;
+  width: 130px;
+  margin-right: 20px;
 }
